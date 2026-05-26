@@ -1,0 +1,10 @@
+services:
+  nodejs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs-jenkins-docker-demo:latest
+    container_name: nodejs-jenkins-docker-demo
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
