@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
         IMAGE_NAME = 'nodejs-jenkins-docker-demo'
         CONTAINER_NAME = 'nodejs-jenkins-docker-demo'
         APP_PORT = '3001'
